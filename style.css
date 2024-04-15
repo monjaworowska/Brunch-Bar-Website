@@ -39,6 +39,7 @@ footer
     position: absolute;
     bottom: 5px;
     right: 5px;
+    color: #000;
 }
 .heading
 {
@@ -46,6 +47,11 @@ footer
     text-transform: uppercase;
     text-align: center;
     padding: 2rem;
+}
+.text
+{
+    font-size: 2rem;
+    line-height: 1.1;
 }
 .btn 
 {
@@ -62,6 +68,12 @@ footer
     background-color: #f8d973; 
     letter-spacing: 0.3rem;
 }
+.image-source
+{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
 /* EQUAL ROWS GRID */
 .box-container-grid
 {
@@ -77,6 +89,15 @@ footer
     width: 100%;
     height: 30rem;
     object-fit: cover;
+}
+.box-grid 
+{
+    position: relative;
+}
+.box-grid .image-source
+{
+    color: #fff;
+    top: 5px;
 }
 /* EQUAL ROWS FLEX */
 .box-container-flex
@@ -98,6 +119,34 @@ footer
     width: 100%;
     height: 30rem;
     object-fit: cover;   
+}
+/* RESPONSIVE ROW TEMPLATE */
+.row
+{
+	display: flex;
+	align-items: center;  
+	flex-wrap: wrap-reverse; 	 
+    gap: 1rem;
+}
+.row .content
+{
+	flex: 1 1 40rem;
+}
+.row .image
+{
+	flex: 1 1 40rem;
+    position: relative;
+}
+.row .image img
+{
+	width: 100%;
+}
+.card 
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* HEADER */
@@ -142,11 +191,15 @@ input[name="search-input"].search-active, input[name="search-input-mobile"].sear
 }
 
 /* HOME */ 
-.home::before
+/*.home::before
 {
-    display: block; content:""; position: absolute;  
-  top:0; left: 0; right: 0; height: 100%;background:rgba(255,255,255,0.2);
-}
+  display: block; 
+  content:""; 
+  position: absolute;  
+  top:0; left: 0; right: 0; 
+  height: 100%;
+  background:rgba(255,255,255,0.2);
+}*/
 .home 
 {
    color: #fff;
@@ -162,7 +215,7 @@ input[name="search-input"].search-active, input[name="search-input-mobile"].sear
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
 }
 .intro h2
 {
@@ -176,6 +229,147 @@ input[name="search-input"].search-active, input[name="search-input-mobile"].sear
     margin: 3rem 0;
     width: 50%;
 }
+/* MENU */
+.menu
+{
+    background-image: url(img/bg-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.menu .content h4
+{
+    font-size: 2rem;
+}
+.menu .content p
+{
+    font-size: 1.5rem;
+}
+/* BLOG */
+.blog
+{
+    color: #fff;
+    background-image: url(img/bg-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* STATS */
+.stat
+{
+    background-image: url(img/bg-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.stat .box-container-flex
+{
+    margin: 2rem;
+}
+.stat .box-flex
+{
+    background-color: transparent;
+}
+.stat-content
+{
+    padding: 5rem;
+    border: 5px solid #000;
+    text-align: center;
+}
+.stat-content h3
+{
+    font-size: 8rem;
+}
+.stat-content p
+{
+    font-size: 5rem;
+}
+/* ABOUT */
+.about
+{
+    color: #fff;
+    background-image: url(img/bg-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* CHEFS */ 
+.chefs
+{ 
+    background-image: url(img/bg-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.chefs .content h4
+{
+    font-size: 3rem;
+    text-align: center;
+}
+/* CONTACT */
+.contact
+{
+    color: #fff;
+    background-image: url(img/bg-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact form
+{
+    width: 80%; 
+}
+.contact input, .contact textarea
+{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin: 3rem 0;
+    border-bottom: 1px solid #fff;
+}
+.contact input::placeholder, .contact textarea::placeholder
+{    
+    text-transform: capitalize;
+}
+/* FOOTER */
+footer
+{
+    color: #fff;
+    background-color: #333;
+}
+footer .box-container-flex .box-flex
+{
+    background-color: transparent;
+}
+footer h3
+{
+    text-transform: capitalize;
+    padding: 2rem 0;
+    font-size: 3rem;
+}
+footer p
+{
+    font-size: 2rem;
+}
+footer a
+{
+    display: block;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 0;
+}
+footer .icons a
+{
+    width: 5rem;
+    height: 5rem; 
+    font-size: 3rem;
+    color: #333;
+    background-color: #fff;
+    text-align: center;
+    margin: 2rem 2rem 0 0;
+    border-radius: 50%;
+}
+
 
 /* MEDIA QUERIES */
 
@@ -183,15 +377,47 @@ input[name="search-input"].search-active, input[name="search-input-mobile"].sear
 	html{
 		font-size: 55%;
 	}
+    .menu
+    {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .blog
+    {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .stat
+    {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .stat-content
+    {
+        padding: 2rem; 
+    }
+    .stat-content h3
+    {
+        font-size: 4rem;
+    }
+    .stat-content p
+    {
+        font-size: 3rem;
+        
+    }
+    .chefs
+    {
+        background-size: contain;
+        background-repeat: repeat;
+    }
 }
-
 @media (max-width:768px){
 	html{
 		font-size: 50%;
 	}
     section 
     {
-        padding: 2rem 2%;
+        padding: 2rem 2% 5rem 2%;
         min-height: auto;
     }
     footer

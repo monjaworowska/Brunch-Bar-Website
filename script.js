@@ -19,7 +19,15 @@ let menuBtn = document.querySelector("#menu-btn"),
   headerNav = document.querySelector("header nav");
 
 menuBtn.onclick = () => {
-  console.log("klik");
   menuBtn.classList.toggle("fa-times");
   headerNav.classList.toggle("active");
 };
+
+let navLink = document.querySelectorAll("header nav a");
+navLink.forEach((el) =>
+  el.addEventListener("click", () => {
+    console.log("klik");
+    menuBtn.classList.remove("fa-times");
+    headerNav.classList.remove("active");
+  })
+);
