@@ -148,7 +148,7 @@ input[name="search-input"].search-active, input[name="search-input-mobile"].sear
     background-image: url(img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;   
+    background-size: cover;   opacity: .8;
 }
 /* INTRO */
 .intro
